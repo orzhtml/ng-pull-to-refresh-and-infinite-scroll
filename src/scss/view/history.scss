@@ -1,7 +1,7 @@
 /**
  * Created by carson on 2016/11/3.
  */
-section.merchant-payment-history {
+section.history {
 	background-color: #f4f4f4;
 	.history-filter {
 		background-color: #f4f4f4;
@@ -95,7 +95,7 @@ section.merchant-payment-history {
 	}
 }
 @media (max-width: 320px) {
-	section.merchant-payment-history {
+	section.history {
 		top: 48px;
 	}
 }
