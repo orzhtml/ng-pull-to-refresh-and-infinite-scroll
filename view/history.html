@@ -1,0 +1,39 @@
+<header class="global-header">
+	<a href="javascript:history.go(-1)" class="back"><i class="icon icon-back"></i></a>
+	<a href="javascript:void(0);" class="exit"><i class="icon icon-exit"></i></a>
+	<h1>ng-pull-to-refresh-and-infinite-scroll</h1>
+</header>
+
+<!-- container 都属于页面级的内容 -->
+<main data-role="page" ng-controller='DemoController'>
+	<section class="container merchant-payment-history">
+
+		<div class="history-filter">
+			<a class="btn-filter">Filter<i></i></a>
+			<h5>History</h5>
+		</div>
+
+		<div class="history-top" infinite-scroll="reddit.nextPage()" infinite-scroll-disabled="reddit.busy" infinite-scroll-distance="1">
+			<div ontouchstart pull-to-refresh="reddit.onReload()">
+				<ul class="ui-cells ui-border-tb">
+					<li class="ui-cell ui-border-b cancelled" ng-repeat='item in reddit.items'>
+						<div class="ui-cell-hd">
+							<p class="time fz16p">{{item._dt}}</p>
+							<p class="time fz14p">{{item._mm}}</p>
+						</div>
+						<div class="ui-cell-bd">
+							<p class="money">{{item._money}}</p>
+							<p class="gray">{{item._type}}</p>
+						</div>
+						<div class="ui-cell-ft">
+							<p class="state">{{item._state}}</p>
+							<p class="gray">{{item._posname}}</p>
+						</div>
+					</li>
+					<li class="loading-data" ng-show='reddit.busy'>Loading data...</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+</main>
+<!-- container 都属于页面级的内容 end -->

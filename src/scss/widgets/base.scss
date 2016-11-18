@@ -1,0 +1,54 @@
+/**
+ * Created by carson on 2016/11/4.
+ */
+html,
+body,
+.viewport,
+main,
+section.container {
+	height: 100%;
+	overflow: hidden;
+}
+.viewport {
+	min-width: 320px;
+	margin: 0 auto;
+	width: 100%;
+}
+main {
+	padding-top: 64px;
+	margin-top: -64px;
+}
+$height: 40px;
+.pull-to-refresh,
+.loading-data {
+	width: 100%;
+	height: $height;
+	text-align: center;
+	line-height: $height;
+	transition-duration: 400ms;
+	transition-property: margin;
+	// Make block visible to gpu scroll
+	transform: translateZ(0px);
+	.fa-spin {
+		animation: spin 2s infinite linear;
+	}
+}
+.pull-to-refresh {
+	border-bottom: 1px dashed #ccc;
+	margin: -$height auto 0;
+}
+.loading-data {}
+@media (max-width: 320px) {
+	main {
+		padding-top: 48px;
+		margin-top: -48px;
+	}
+}
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(359deg);
+	}
+}

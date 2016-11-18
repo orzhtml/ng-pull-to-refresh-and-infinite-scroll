@@ -1,0 +1,101 @@
+/**
+ * Created by carson on 2016/11/3.
+ */
+section.merchant-payment-history {
+	background-color: #f4f4f4;
+	.history-filter {
+		background-color: #f4f4f4;
+		color: #252525;
+		height: 30px;
+		line-height: 30px;
+		padding: 0 12px;
+	}
+	h5 {
+		font-size: 14px;
+		font-weight: 400;
+	}
+	.btn-filter {
+		color: #ff5150;
+		float: right;
+		font-size: 14px;
+		&:after {
+			background: url("../images/icon/icon_filter.png") no-repeat;
+			-webkit-background-size: 100%;
+			background-size: 100%;
+			content: '';
+			display: inline-block;
+			height: 12px;
+			margin-left: 5px;
+			width: 11px;
+			vertical-align: middle;
+		}
+	}
+	.ui-cells {
+		background-color: #ffffff;
+		width: 100%;
+	}
+	.history-top {
+		background-color: #ffffff;
+		overflow-y: auto;
+		width: 100%;
+		backface-visibility: hidden;
+		-webkit-overflow-scrolling: touch;
+		overflow-scrolling: touch;
+	}
+	.fz16p {
+		font-size: 16px;
+	}
+	.fz14p {
+		font-size: 14px;
+	}
+	.ui-cell {
+		height: 60px;
+		line-height: 20px;
+		padding: 10px 0;
+		position: relative;
+		&.cancelled * {
+			color: #aaaaaa;
+		}
+	}
+	.ui-cell-hd {
+		color: #aaaaaa;
+		padding: 0 10px;
+		text-align: center;
+		width: 68px;
+	}
+	.ui-cell-ft {
+		padding: 0 5px;
+		text-align: right;
+	}
+	.ui-cell-item {
+		padding: 0 10px;
+	}
+	.money {
+		color: #252525;
+		font-size: 16px;
+		&:after {
+			content: '';
+			display: table;
+			clear: both;
+		}
+		.money-unit {
+			color: #aaaaaa;
+			float: right;
+			font-size: 14px;
+			text-transform: uppercase;
+		}
+	}
+	.state {
+		color: #818181;
+		font-size: 12px;
+	}
+	.gray {
+		color: #818181;
+		font-size: 12px;
+	}
+}
+@media (max-width: 320px) {
+	section.merchant-payment-history {
+		top: 48px;
+	}
+}
